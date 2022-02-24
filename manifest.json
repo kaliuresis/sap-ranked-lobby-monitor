@@ -1,0 +1,30 @@
+{
+
+    "manifest_version": 2,
+    "name": "Super Auto Pets Ranked Lobby Monitor",
+    "version": "0.0",
+
+    "description": "Tracks the status of a lobby in super auto pets for Donut Seeds ELO ranking system.",
+
+    "icons": {
+        "48": "icons/border-48.png"
+    },
+
+    "permissions": [
+        "storage",
+        "webRequest",
+        "webRequestBlocking",
+        "<all_urls>"
+    ],
+
+    "content_scripts": [
+        {
+            "matches": ["*://teamwood.itch.io/super-auto-pets*"],
+            "js": ["content.js"]
+        }
+    ],
+
+    "background": {
+        "scripts": ["petwatcher.js"]
+    }
+}
